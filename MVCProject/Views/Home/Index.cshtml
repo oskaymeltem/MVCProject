@@ -1,0 +1,31 @@
+﻿@model List<MVCProject.Models.User>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">ADI</th>
+            <th scope="col">KULLANICI ADI</th>
+            <th scope="col">E-POSTA</th>
+            <th scope="col">TELEFON</th>
+            <th scope="col">WEB SİTESİ</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th scope="row">@item.id</th>
+                <td>@item.name</td>
+                <td>@item.username</td>
+                <td>@item.email</td>
+                <td>@item.phone</td>
+                <td>@item.website</td>
+            </tr>
+        }
+    </tbody>
+</table>
